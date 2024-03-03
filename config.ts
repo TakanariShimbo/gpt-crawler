@@ -1,9 +1,15 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://www.builder.io/c/docs/developers",
-  match: "https://www.builder.io/c/docs/**",
-  maxPagesToCrawl: 50,
-  outputFileName: "output.json",
+  url: "https://www.uniontool.co.jp/",
+  match: ["https://www.uniontool.co.jp/**"],
+  exclude: [
+    "https://www.uniontool.co.jp/en/**",
+    "https://www.uniontool.co.jp/en/**",
+    "https://www.uniontool.co.jp/assets/**",
+    "https://www.uniontool.co.jp/**/assets/**",
+  ],
+  maxPagesToCrawl: 500,
+  outputFileName: "uniontool_web_info.json",
   maxTokens: 2000000,
 };
