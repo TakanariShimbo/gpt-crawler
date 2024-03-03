@@ -5,7 +5,7 @@ export const defaultConfig: Config = {
   match: ["https://www.uniontool.co.jp/**"],
   exclude: [
     "https://www.uniontool.co.jp/en/**",
-    "https://www.uniontool.co.jp/en/**",
+    "https://www.uniontool.co.jp/cn/**",
     "https://www.uniontool.co.jp/assets/**",
     "https://www.uniontool.co.jp/**/assets/**",
   ],
