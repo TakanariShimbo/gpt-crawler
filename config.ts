@@ -10,6 +10,6 @@ export const defaultConfig: Config = {
     "https://www.uniontool.co.jp/**/assets/**",
   ],
   maxPagesToCrawl: 500,
-  outputFileName: "uniontool_web_info.json",
+  outputFileName: "uniontool.json",
   maxTokens: 2000000,
 };
