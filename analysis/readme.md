@@ -5,14 +5,14 @@ URL Hierarchy Visualizer
 # Create Venv
 
 ```
-conda create -n python310_gpt_crawler_viz python=3.10 -y
-conda activate python310_gpt_crawler_viz
+conda create -n python310_gpt_crawler_analysis python=3.10 -y
+conda activate python310_gpt_crawler_analysis
 ```
 
 # Run
 
 ```
-python ./viz/viz_url_hierarchy.py
+python ./analysis/visualize_url_layer.py
 ```
 
 # Viz
