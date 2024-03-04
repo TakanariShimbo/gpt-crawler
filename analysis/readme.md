@@ -12,7 +12,7 @@ conda activate python310_gpt_crawler_analysis
 # Run
 
 ```
-python ./analysis/visualize_url_layer.py
+python ./analysis/analyze_url_layer.py
 ```
 
 # Viz
