@@ -1,6 +1,7 @@
-import argparse
 import json
 from urllib.parse import urlparse
+
+from config import Config
 
 
 def build_hierarchy_with_files(page_dicts):
@@ -27,15 +28,9 @@ def print_hierarchy_with_files(hierarchy, indent=0, n_layer=None, file=None):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=str, required=True, help="Path to the input JSON file")
-    parser.add_argument("--output", type=str, required=True, help="Path to the output MARKDOWN file")
-    parser.add_argument("--layer", type=int, default=None, help="Maximum depth of layer to display. Defaults to showing all layers.")
-    args = parser.parse_args()
-
-    with open(args.input, "r", encoding="utf-8") as input_file:
+    with open(Config.input_json_path, "r", encoding="utf-8") as input_file:
         page_dicts = json.load(input_file)
 
     hierarchy_with_files = build_hierarchy_with_files(page_dicts)
-    with open(args.output, "w", encoding="utf-8") as output_file:
-        print_hierarchy_with_files(hierarchy_with_files, n_layer=args.layer, file=output_file)
+    with open(Config.output_markdown_path, "w", encoding="utf-8") as output_file:
+        print_hierarchy_with_files(hierarchy_with_files, n_layer=Config.n_layer_depth, file=output_file)

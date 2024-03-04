@@ -12,7 +12,7 @@ conda activate python310_gpt_crawler_viz
 # Run
 
 ```
-python ./viz/viz_url_hierarchy.py --input ./res/uniontool.json --output ./res/uniontool.md
+python ./viz/viz_url_hierarchy.py
 ```
 
 # Viz
