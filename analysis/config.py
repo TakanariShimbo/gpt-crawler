@@ -8,6 +8,9 @@ class Config:
 
     # parse required pages
     matches = [
-        "https://www.uniontool.co.jp/product/*",
+        "https://www.uniontool.co.jp/product/**",
+    ]
+    excludes = [
+        "https://www.uniontool.co.jp/product/**.html",
     ]
     output_json_path = "./res/parsed_uniontool.json"

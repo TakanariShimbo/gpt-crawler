@@ -5,7 +5,14 @@ import fnmatch
 from config import Config
 
 
-def match_url_pattern(url: str, matches: List[str]):
+def match_url_pattern(
+    url: str,
+    matches: List[str],
+    excludes: List[str],
+):
+    for exclude in excludes:
+        if fnmatch.fnmatch(name=url, pat=exclude):
+            return False
     for match in matches:
         if fnmatch.fnmatch(name=url, pat=match):
             return True
@@ -18,7 +25,7 @@ if __name__ == "__main__":
 
     matched_page_dicts = []
     for page_dict in page_dicts:
-        is_matched = match_url_pattern(url=page_dict["url"], matches=Config.matches)
+        is_matched = match_url_pattern(url=page_dict["url"], matches=Config.matches, excludes=Config.excludes)
         if is_matched:
             matched_page_dicts.append(page_dict)
 
