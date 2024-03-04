@@ -18,3 +18,4 @@ storage
 pnpm-lock.yaml
 
 res/*.md
+res/*.html
