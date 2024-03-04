@@ -23,4 +23,4 @@ if __name__ == "__main__":
             matched_page_dicts.append(page_dict)
 
     with open(Config.output_json_path, "w", encoding="utf-8") as output_file:
-        json.dump(matched_page_dicts, output_file, ensure_ascii=False, indent=4)
+        json.dump(matched_page_dicts, output_file, ensure_ascii=False, indent=2)
