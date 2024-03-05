@@ -8,7 +8,7 @@ from config import ParseConfig
 
 parser = argparse.ArgumentParser(description='Analyze web page structure and generate a layer markdown file.')
 parser.add_argument('--input', type=str, default=None, help='Path to the input JSON file containing page URLs')
-parser.add_argument('--output', type=str, required=None, help='Path to the output JSON file containing page URLs')
+parser.add_argument('--output', type=str, default=None, help='Path to the output JSON file containing page URLs')
 
 
 def match_url_pattern(

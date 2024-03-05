@@ -4,7 +4,8 @@ class AnalyzeConfig:
     input  = "./res/uniontool.json"
     output = None
     layer  = None
-    disable_titles = None
+    detail = None
+    full = None
 
 class ParseConfig:
     input  = "./res/uniontool.json"

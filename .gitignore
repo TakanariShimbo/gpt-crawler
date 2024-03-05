@@ -18,3 +18,5 @@ pnpm-lock.yaml
 
 res/*.md
 res/*.html
+
+__pycache__
