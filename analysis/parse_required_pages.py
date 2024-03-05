@@ -69,3 +69,5 @@ if __name__ == "__main__":
 
     with open(output_filepath, "w", encoding="utf-8") as output_file:
         json.dump(matched_page_dicts, output_file, ensure_ascii=False, indent=2)
+
+    print(f"Parsed {len(matched_page_dicts)} pages!")

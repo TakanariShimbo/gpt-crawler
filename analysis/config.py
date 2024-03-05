@@ -7,11 +7,9 @@ class AnalyzeConfig:
 
 class ParseConfig:
     input  = "./res/uniontool.json"
-    output = "./res/parsed_uniontool.json"
+    output = "./res/uniontool_recruit_info.json"
 
     matches = [
-        r"https://www\.uniontool\.co\.jp/product/.+",
+        r"https://www\.uniontool\.co\.jp/recruit/.+",
     ]
-    excludes = [
-        r"https://www\.uniontool\.co\.jp/product/.+\.html",
-    ]
+    excludes = []
