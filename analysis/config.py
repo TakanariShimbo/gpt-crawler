@@ -1,16 +1,17 @@
 
 
-class Config:
-    # analyze url layer
-    input_json_path = "./res/uniontool.json"
-    output_markdown_path = "./res/uniontool.md"
-    n_layer_depth = None
+class AnalyzeConfig:
+    input  = "./res/uniontool.json"
+    output = None
+    layer  = None
 
-    # parse required pages
+class ParseConfig:
+    input  = "./res/uniontool.json"
+    output = "./res/parsed_uniontool.json"
+
     matches = [
-        "https://www.uniontool.co.jp/product/**",
+        r"https://www\.uniontool\.co\.jp/product/.+",
     ]
     excludes = [
-        "https://www.uniontool.co.jp/product/**.html",
+        r"https://www\.uniontool\.co\.jp/product/.+\.html",
     ]
-    output_json_path = "./res/parsed_uniontool.json"

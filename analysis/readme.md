@@ -12,7 +12,8 @@ conda activate python310_gpt_crawler_analysis
 # Run
 
 ```
-python ./analysis/analyze_url_layer.py
+python ./analysis/analyze_url_layer.py --input ./res/uniontool.json
+python ./analysis/parse_required_pages.py --input ./res/uniontool.json --output ./res/parsed_uniontool.json
 ```
 
 # Viz
